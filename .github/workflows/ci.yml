@@ -1,0 +1,29 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+      - name: End-to-end run (Python reference)
+        run: python -m puzzlebench run two-sum solutions/two_sum.py --report reports/report.json
+      - name: End-to-end run (C++ reference)
+        run: python -m puzzlebench run shortest-path solutions/shortest_path.cpp --report reports/report-cpp.json
+      - name: Reproducibility check
+        run: python -m puzzlebench verify reports/report.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reports-py${{ matrix.python-version }}
+          path: reports/

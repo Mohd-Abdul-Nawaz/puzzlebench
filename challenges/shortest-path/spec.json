@@ -1,0 +1,10 @@
+{
+  "id": "shortest-path",
+  "title": "Shortest Path (Dijkstra)",
+  "difficulty": "medium",
+  "time_limit_ms": 2000,
+  "comparison": "tokens",
+  "statement": "statement.md",
+  "tags": ["graphs", "dijkstra", "heap"],
+  "tests": ["tests/public.json", "tests/hidden.json"]
+}

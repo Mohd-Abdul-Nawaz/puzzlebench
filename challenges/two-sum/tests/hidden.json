@@ -1,0 +1,20 @@
+[
+  {
+    "name": "hidden-1-unsorted",
+    "input": "5 12\n9 1 4 6 3\n",
+    "expected": "0 4\n",
+    "hidden": true
+  },
+  {
+    "name": "hidden-2-duplicates",
+    "input": "5 6\n3 3 1 2 9\n",
+    "expected": "0 1\n",
+    "hidden": true
+  },
+  {
+    "name": "hidden-3-no-solution",
+    "input": "4 100\n10 20 30 40\n",
+    "expected": "-1\n",
+    "hidden": true
+  }
+]

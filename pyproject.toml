@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "puzzlebench"
+version = "1.0.0"
+description = "A small, reproducible local judge for self-contained coding challenges: public + hidden tests, WA/TLE/RE/CE verdicts, SHA-256 report digests."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Mohd Abdul Nawaz" }]
+keywords = ["competitive-programming", "judge", "testing", "reproducibility", "algorithms"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Testing",
+]
+
+[project.scripts]
+puzzlebench = "puzzlebench.cli:main"
+
+[tool.setuptools]
+packages = ["puzzlebench"]

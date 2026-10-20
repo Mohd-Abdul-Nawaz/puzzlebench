@@ -1,0 +1,10 @@
+{
+  "id": "lis",
+  "title": "Longest Increasing Subsequence",
+  "difficulty": "medium",
+  "time_limit_ms": 2000,
+  "comparison": "tokens",
+  "statement": "statement.md",
+  "tags": ["dp", "binary-search", "greedy"],
+  "tests": ["tests/public.json", "tests/hidden.json"]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "hidden-1-duplicates",
+    "input": "8\n1 2 2 3 1 1 4 5\n",
+    "expected": "5\n",
+    "hidden": true
+  },
+  {
+    "name": "hidden-2-all-equal",
+    "input": "6\n1 1 1 1 1 1\n",
+    "expected": "1\n",
+    "hidden": true
+  },
+  {
+    "name": "hidden-3-two-blocks",
+    "input": "10\n1 2 3 4 5 1 2 3 4 5\n",
+    "expected": "5\n",
+    "hidden": true
+  }
+]
